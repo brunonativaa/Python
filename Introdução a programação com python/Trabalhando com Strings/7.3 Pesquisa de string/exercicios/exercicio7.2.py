@@ -5,7 +5,7 @@ mas deve conter todas as letras comuns a ambas. """
 string1 = input("Digite a primeira string: ")
 string2 = input("Digite a segunda string: ")
 
-resultado = '' \
+resultado = '' 
 
 # Percorrendo cada letra da primeira string1
 for letra in string1:
