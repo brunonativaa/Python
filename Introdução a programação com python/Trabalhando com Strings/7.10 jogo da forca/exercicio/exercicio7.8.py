@@ -1,10 +1,22 @@
+"""
+Modifique o jogo da forca de forma a utilizar uma lista de palavras. No início, pergunte um número e calcule o índice da palavra a 
+utilizar pela fórmula: índice = (número * 776) % len(lista_de_palavras).
 
-palavra = input("Digite a palavra secreta: ").lower().strip()
-# input para chamar os métodos de string lower e strip.
+"""
+# Cria o banco de palavras
+lista_de_palavras = ["python","notebook","computador","windowns","algoritmo"]
 
+# pede o número ao usuário
+numero = int(input("Digite um número para sortear a palavra: "))
 
-for x in range(100):
-    print() # Pulando várias linhas para que o jogador não veja o que foi digitado como palavra
+# calculo para saber qual o (indice) da palavra escolhida 
+indice = (numero * 776) % len(lista_de_palavras)
+
+# puxa a palavra da lista usando o indice calculado
+palavra = lista_de_palavras[indice]
+
+print("\n" * 100) # Pula as linhas
+print("A palavra foi escolhida! Comece a adivinhar")
 
 digitadas = []
 acertos = []
@@ -20,7 +32,7 @@ while True:
     print(senha)
 
     if senha == palavra:
-        print("Você acertou!")
+        print("Você acertou! 🥳")
         break
     
     tentativa = input("\nDigite uma letra: ").lower().strip()
@@ -68,4 +80,6 @@ while True:
 
     if erros == 6:
         print("Enforcado!")
-        break
+        print(f"A palavra é: {palavra}")
+        print("Game Over👾")
+        break # O break encerra o jogo quando o jogador perder!

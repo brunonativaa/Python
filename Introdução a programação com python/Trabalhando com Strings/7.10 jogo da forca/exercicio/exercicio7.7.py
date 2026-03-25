@@ -1,4 +1,7 @@
 
+# Modifique o programa de forma a escrever a palavra secreta caso o jogador perca.
+
+
 palavra = input("Digite a palavra secreta: ").lower().strip()
 # input para chamar os métodos de string lower e strip.
 
@@ -68,4 +71,6 @@ while True:
 
     if erros == 6:
         print("Enforcado!")
-        break
+        print(f"A palavra é: {palavra}")
+        print("Game Over👾")
+        break # O break encerra o jogo quando o jogador perder!
