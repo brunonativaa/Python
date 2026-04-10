@@ -6,7 +6,7 @@ import sys
 
 # Processa a localidade a partir dos argumentos da linha de comando
 
-if len(sys.argv) < 2:
+if len(sys.argv) < 2: 
     print("Usage: quickWeather.py Itapecerica da Serra, BR")
     sys.exit()
 location = ' '.join(sys.argv[1:])
@@ -19,24 +19,26 @@ location = ' '.join(sys.argv[1:])
 
 # faz o download dos dados JSON a partir da api openweatherMap.org
 chave_api = "93254b9b6cdaaf855031fecd61d250df"
-url = f'http://api.openweathermap.org/data/2.5/forecast/daily?q={location}&cnt=3&appid={chave_api}&units=metric&lang=pt_br'
+url = f'http://api.openweathermap.org/data/2.5/forecast?q={location}&cnt=3&appid={chave_api}&units=metric&lang=pt_br'
 
 response = requests.get(url) 
-  # Carrega os dados em uma variavel Python - Faz a requisição
+  # Carrega os dados em uma variavel Python - Faz a requisição para API
+
+
+try:
+    response.raise_for_status()
+except Exception as exc:
+    print(f"Houve um problema com o download: {exc}")   
+    sys.exit() 
 
 if response.status_code == 401: # Verifica se a chave barrou a entrada
     print("\n--- AVISO DO GUICHÊ ---")
     print("A chave da API (2740) ainda não está ativa no servidor.")
-    print("Aguarde alguns minutos ou verifique seu e-mail de confirmação.")
+    
     sys.exit()
 
-elif not response.ok: # se não for o erro 401, ele avisa
-    print(f"Erro inesperado: {response.status_code}")
-    response.raise_for_status()
-    sys.exit()
 
-else: # se der tudo certo
-    print("Sucesso! Liberada a entrada")
+print("Sucesso! Liberada a entrada")
     
 
 weatherData = json.loads(response.text)
