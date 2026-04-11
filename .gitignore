@@ -9,3 +9,7 @@ env/
 # Ignorar arquivos do Windows
 Thumbs.db
 desktop.ini
+
+
+#Ignora esse Arquivo protect
+credenciais.py
