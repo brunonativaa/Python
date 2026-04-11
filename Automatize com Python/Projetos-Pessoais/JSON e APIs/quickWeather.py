@@ -1,6 +1,6 @@
 # quickWeather.py – Exibe a previsão do tempo para uma localidade obtida na linha de comando.
 from twilio.rest import Client 
-import credenciais
+import credenciais 
 import json 
 import requests
 import sys
@@ -20,7 +20,7 @@ location = ' '.join(sys.argv[1:])
 
 
 
-url = f'http://api.openweathermap.org/data/2.5/forecast?q={location}&cnt=3&appid={credenciais}&units=metric&lang=pt_br'
+url = f'http://api.openweathermap.org/data/2.5/forecast?q={location}&cnt=3&appid={credenciais.chave_openweather}&units=metric&lang=pt_br'
 
 response = requests.get(url) 
   # Carrega os dados em uma variavel Python - Faz a requisição para API
