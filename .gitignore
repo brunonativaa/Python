@@ -12,4 +12,12 @@ desktop.ini
 
 
 #Ignora esse Arquivo protect
-credenciais.py
+credenciais.py  
+
+
+#Ignora pasta 
+.vscode/
+
+#ignora o repo clone
+Python-Clone_Git/
+.env
