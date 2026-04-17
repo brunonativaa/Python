@@ -1,8 +1,0 @@
-Tuplas podem ser vistas como listas em Python, com a grande diferença de serem imutáveis. 
-Tuplas são ideais para representar listas de valores constantes e também para realizar 
-operações de empacotamento e desempacotamento de valores. Primeiramente, vejamos como criar uma tupla. 
-Tuplas são criadas de forma semelhante às listas, mas utilizamos parênteses em vez de colchetes.
-Por exemplo: >>> tupla = ("a", "b", "c") >>> tupla ('a', 'b', 'c') Tuplas suportam a maior parte das operações de lista,
-como fatiamento e indexação.
-
-(Página 129). 
