@@ -1,0 +1,11 @@
+# Ignorar banco de dados local
+minha_agenda.db
+
+# Ignorar pastas de cache do Python
+__pycache__/
+*.pyc
+
+# Ignorar arquivos de configuração do VS Code ou ambientes virtuais (opcional)
+.vscode/
+venv/
+.env
