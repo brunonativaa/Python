@@ -1,7 +1,7 @@
 📱 Agenda de Contatos CRUD (Python + SQLite)<br>
 _Este projeto foi o resultado de um Build Day focado em integrar Python com o banco de dados SQLite.<br> Mais do que um simples cadastro, o desenvolvimento deste script trouxe aprendizados profundos sobre como softwares interagem com o sistema de arquivos e como bancos de dados garantem a integridade das informações._
 
-![Demonstração da Agenda](img/demonstração.gif)
+
 
 ___
 **🚀Funcionalidades**
@@ -15,6 +15,8 @@ ___
 **Update: Atualiza números de telefone utilizando o ID único do registro.**
 
 **Delete: Remove contatos específicos, prevenindo a exclusão acidental de toda a base.**
+
+![Demonstração da Agenda](img/demonstração.gif)
 ___
 
 🛠️ Tecnologias
